@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .main {
+                width: 300px;
+                height: 300px;
+                background-color: skyblue;
+                display: grid;
+                grid-template-columns: 100px 100px 100px;
+                grid-template-rows: 100px 100px 100px;
+                place-items: center start;
+            }
+
+            .main div {
+                width: 50px;
+                height: 50px;
+                background-color: pink;
+            }
+
+            /* 
+                当网格小于容器大小时，使用 *-content 来设置网格在容器中的位置
+            */
+            .main2 {
+                width: 500px;
+                height: 500px;
+                margin-top: 100px;
+                background-color: skyblue;
+                display: grid;
+                grid-template-columns: 100px 100px 100px;
+                grid-template-rows: 100px 100px 100px;
+                /* 和 flex 类似 */
+                /* justify-content: space-between;
+                align-content: center; */
+                /* justify-items: end;
+                align-items: start; */
+                /* 第一个参数为垂直方向，第二参数为水平方向 */
+                place-content: center space-between;
+            }
+
+            .main2 div {
+                background-color: pink;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+        </div>
+        <div class="main2">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+        </div>
+    </body>
+</html>

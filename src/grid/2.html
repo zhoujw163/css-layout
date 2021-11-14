@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            /* 
+                容器定义成 3 * 3的网格
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                以行代表组，
+                第一组： 'a1 a1 a2'，第一行第一网格区域名称为 a1，第二个网格名称为 a1，第三个网格名称为 a2，第二组，第三组类似。
+                第二组： 'a1 a1 a2'
+                第三组： 'a3 a3 a3'
+
+                给每个子项指定名称，该子项的大小就是所有相同区域名称合并的大小
+                grid-template-areas: 'a1 a1 a2' 'a1 a1 a2' 'a3 a3 a3';
+            */
+            .main {
+                width: 300px;
+                height: 300px;
+                background-color: skyblue;
+                display: grid;
+                /* grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-template-areas: 'a1 a1 a2' 'a1 a1 a2' 'a3 a3 a3'; */
+                /* 
+                    使用 grid-template 复合属性缩写
+                    区域名称后面的代表每一行的大小
+                    / 后面的表示列的划分
+                */
+
+                grid-template:
+                    'a1 a1 a2' 1fr
+                    'a1 a1 a2' 1fr
+                    'a3 a3 a3' 1fr
+                    / 1fr 1fr 1fr;
+            }
+
+            .main div {
+                border: 1px solid #000;
+                box-sizing: border-box;
+                background-color: pink;
+            }
+
+            .main div:nth-of-type(1) {
+                grid-area: a1;
+            }
+            .main div:nth-of-type(2) {
+                grid-area: a2;
+            }
+            .main div:nth-of-type(3) {
+                grid-area: a3;
+            }
+
+            /* 
+                指定第一个div 区域名称为 a2: 即将第一个div放到第二网格上，
+                剩余元素从左到右填充剩余网格（第二div放到第一个网格上，第三个div放到第三个网格上）
+            */
+            /* .main {
+                width: 300px;
+                height: 300px;
+                background-color: skyblue;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-template-areas: 'a1 a2 a3';
+            }
+            .main div {
+                border: 1px solid #000;
+                box-sizing: border-box;
+                background-color: pink;
+            }
+            .main div:nth-of-type(1) {
+                grid-area: a2;
+            } */
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+    </body>
+</html>
