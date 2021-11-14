@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .main {
+                width: 500px;
+                height: 300px;
+                background: skyblue;
+                display: flex;
+                margin-bottom: 80px;
+                align-items: flex-start;
+            }
+            .main1 div {
+                /* width: 100px; */
+                height: 100px;
+                background: pink;
+                /* 设置元素在主轴方向所占据的空间，优先级要大于 width，height，小于max-width max-height */
+                /* flex-basis: 200px; */
+
+                /* 默认为 auto，取元素设置的宽或高，没有设置就为0 */
+                /* flex-basis: auto; */
+
+                /* 元素设置宽或高设为0 */
+                /* flex-basis: 0; */
+
+                /* 主轴为水平，最大值为元素的宽，主轴为垂直方向，最大值为元素的宽高 */
+                flex-basis: 400%;
+            }
+            .main2 div {
+                background: pink;
+                /* 如果存在文字，则最小的宽或高位每个文字的宽或高（对于英文或数字，为不换行的宽或高） */
+                /* flex-basis: 0; */
+
+                /* flex-grow: 1;
+                    flex-shrink: 1;
+                    flex-basis: 0%; */
+                flex: 1;
+
+                /*  flex-grow: 0;
+                    flex-shrink: 1;
+                    flex-basis: 0%; */
+                /*  flex:0; */
+
+                /* flex-grow: 1;
+                    flex-shrink: 1;
+                    flex-basis: auto; */
+                /* flex:auto; */
+
+                /* flex-grow: 1;
+                flex-shrink: 0;
+                flex-basis: 50%; */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main main1">
+            <div></div>
+        </div>
+        <div class="main main2">
+            <div>测试文字</div>
+        </div>
+    </body>
+</html>

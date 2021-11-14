@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .main {
+                width: 500px;
+                height: 200px;
+                background: skyblue;
+                display: flex;
+                margin-bottom: 100px;
+            }
+            .main div {
+                width: 600px;
+                height: 100px;
+                background: pink;
+                /* flex-shrink : 1; 默认。自动收缩，收缩后的宽度和容器宽度大小相同 */
+                /* flex-shrink: 0; 不收缩 */
+                /* flex-shrink: 0.5; 收缩后元素的宽度为：元素宽度 - 溢出空间 * 比例 */
+                flex-shrink: 0.5;
+            }
+
+            .main2 {
+                width: 500px;
+                height: 200px;
+                background: skyblue;
+                display: flex;
+            }
+            .main2 div:nth-of-type(1) {
+                width: 300px;
+                height: 100px;
+                background: pink;
+                flex-shrink: 0.2;
+            }
+            .main2 div:nth-of-type(2) {
+                width: 400px;
+                height: 100px;
+                background: pink;
+                flex-shrink: 0.1;
+            }
+
+            /* 
+                多个子元素缩放计算：
+                溢出宽度 = 所有子元素宽度 - 容器宽度；
+
+                子元素比例值都为 1 的情况：
+                子元素收缩后的宽度 = 原先子元素宽度 - 原先子元素宽度 / 所有子元素宽度总和 * 溢出宽度
+
+                子元素比例值都为 1 的情况：
+                子元素收缩后的宽度 = 原先子元素宽度  - (原先子元素宽度 * 比例值) / (所有子元素宽度 * 比例值后的总和) * 溢出宽度
+             */
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div>1</div>
+        </div>
+
+        <div class="main2">
+            <div>1</div>
+            <div>2</div>
+        </div>
+    </body>
+</html>

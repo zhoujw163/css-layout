@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .main {
+                height: 400px;
+                background-color: skyblue;
+                margin-bottom: 20px;
+                display: flex;
+            }
+
+            .main div {
+                width: 100px;
+                height: 100px;
+                background-color: pink;
+            }
+
+            .main1 div {
+                /* flex-grow: 0;   默认的 */
+                /* 一个子元素时 如果比例值大于1，就占满剩余的所有空间 */
+                /* 一个子元素时 如果比例值小于1，宽度 = 剩余空间 * 比例 + 元素自身宽度 */
+                /* flex-grow: 1.2; */
+                flex-grow: 0.5;
+            }
+
+            /* 多个子元素会按比例分配剩余空间 */
+            /* 如果比例值加起来大于1，则按比例分配剩余的所有空间 */
+            /* 如果比例值都小于1，则分配的空间为剩余空间 * 所有比例的和，再按该可分配的空间进行各子项比例分配 */
+            /* flex-grow: 1.2; */
+            .main2 div:nth-of-type(1) {
+                flex-grow: 2;
+            }
+            .main2 div:nth-of-type(2) {
+                flex-grow: 1;
+            }
+
+            .main3 div:nth-of-type(1) {
+                flex-grow: 0.1;
+            }
+            .main3 div:nth-of-type(2) {
+                flex-grow: 0.5;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main main1">
+            <div>1</div>
+        </div>
+
+        <div class="main main2">
+            <div>1</div>
+            <div>2</div>
+        </div>
+
+        <div class="main main3">
+            <div>1</div>
+            <div>2</div>
+        </div>
+    </body>
+</html>

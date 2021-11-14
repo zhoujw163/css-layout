@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .box1 {
+                width: 500px;
+                height: 500px;
+                background-color: #ccc;
+                display: flex;
+                flex-wrap: wrap;
+                /* align-content 必须设置 flex-wrap 不为 nowrap， 取值和 justify-content 的取值 + stretch（默认 */
+                align-content: space-evenly;
+            }
+
+            .box1 div {
+                width: 100px;
+                height: 100px;
+                background-color: skyblue;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box1">
+            <div class="box2">1</div>
+            <div class="box2">2</div>
+            <div class="box2">3</div>
+        </div>
+    </body>
+</html>
