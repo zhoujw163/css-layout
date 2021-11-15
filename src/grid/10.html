@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .main {
+                height: 300px;
+                background-color: skyblue;
+                display: grid;
+                /* grid-template-columns: 100px 100px 100px; */
+                /* grid-template-columns: repeat(3, 100px); */
+
+                /* grid-template-columns: 150px 100px 100px; */
+                /* grid-template-columns: 150px repeat(2, 100px); */
+                /* auto-fill：会自动根据容器大小产生多少个网格，第二个参数每个网格大小 */
+                grid-template-columns: repeat(auto-fill, 100px);
+                grid-template-rows: 100px;
+            }
+
+            .main div {
+                background-color: pink;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+    </body>
+</html>

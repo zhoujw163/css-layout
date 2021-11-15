@@ -50,3 +50,9 @@
 2. [grid-row, grid-column: 基于线对应位置的缩写方式，通过 / 分割](7.html)。
 3. [grid-area: grid-row-start, grid-column-start, grid-row-end以及grid-column-end属性的缩写，以及额外支持grid-template-areas设置的网格名称](8.html)。
 4. [justify-self: align-self, place-self: 子项对齐方式，和 *-items 用法相同，只不过是操作指定的子项](9.html)。
+
+## repeat 和 minmax
+
+- [repeat 方法及 auto-fill 可选值，指定可重复的数值](10.html)
+- [minmax 方法用来设置最小和最大值的方位](11.html)
+- [综合案例](12.html)

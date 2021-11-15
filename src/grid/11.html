@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .main {
+                height: 300px;
+                background-color: skyblue;
+                display: grid;
+                /* 第一和第三固定大小，第二个自动充满剩余空间 */
+                /* grid-template-columns: 100px 1fr 100px; */
+                /* minmax(100px, 1fr) : 最小值为100px， 最大值为容器剩余空间 */
+                grid-template-columns: 100px minmax(100px, 1fr) 100px;
+                grid-template-rows: 100px;
+            }
+
+            .main div {
+                background-color: pink;
+                border: 1px solid #000;
+                box-sizing: border-box;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+    </body>
+</html>
