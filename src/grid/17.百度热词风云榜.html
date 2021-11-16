@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="../assets/css/reset.css" />
+        <style>
+            .words {
+                width: 300px;
+                margin: 0 auto;
+                padding: 10px;
+                background-color: skyblue;
+                display: grid;
+                grid-template:
+                    'a1 a2 a2' 100px
+                    'a3 a2 a2' 100px
+                    'a4 a4 a5' 100px
+                    'a6 a7 a7' 100px
+                    / 1fr 1fr 1fr;
+                gap: 10px;
+                color: #fff;
+            }
+
+            .words div {
+                /* width: 100px;
+                height: 100px; */
+                background-color: pink;
+            }
+
+            .words div:nth-of-type(1) {
+                grid-area: a1;
+            }
+            .words div:nth-of-type(2) {
+                grid-area: a2;
+            }
+            .words div:nth-of-type(3) {
+                grid-area: a3;
+            }
+            .words div:nth-of-type(4) {
+                grid-area: a4;
+            }
+            .words div:nth-of-type(5) {
+                grid-area: a5;
+            }
+            .words div:nth-of-type(6) {
+                grid-area: a6;
+            }
+            .words div:nth-of-type(7) {
+                grid-area: a7;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="words">
+            <div>
+                <span>实时热点</span>
+                <h3>阿里第一个芯</h3>
+            </div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+        </div>
+    </body>
+</html>
