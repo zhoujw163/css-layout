@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .box {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+            }
+
+            /* 如果多条件，min-width 编写原则：从小到大 */
+            /* min-width方式：移动优先的原则，先编写移动端设备，然后响应式过渡到 pc 端 */
+
+            /* @media (min-width: 768px) {
+                .box {
+                    background-color: blue;
+                }
+            }
+
+            @media (min-width: 1000px) {
+                .box {
+                    background-color: pink;
+                }
+            } */
+
+            /* 如果多条件，max-width 编写原则：从大到小 */
+            /* max-width方式：pc 端优先的原则，先编写pc 端设备，然后响应式过渡到移动端  */
+
+            @media (max-width: 1000px) {
+                .box {
+                    background-color: pink;
+                }
+            }
+            @media (max-width: 768px) {
+                .box {
+                    background-color: blue;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box"></div>
+    </body>
+</html>
