@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            main {
+                display: grid;
+                gap: 10px;
+                grid-template-columns: 100px 1fr 100px;
+                grid-template-rows: 100px 300px 100px;
+                background-color: skyblue;
+            }
+
+            header,
+            footer {
+                background-color: #ccc;
+                grid-area: 1/1 / span 1 / span 3;
+            }
+
+            .left {
+                background-color: yellow;
+            }
+
+            .center {
+                background-color: pink;
+            }
+
+            .right {
+                background-color: peru;
+            }
+        </style>
+    </head>
+    <body>
+        <!--
+            要求如下：
+
+            1. 采用网格进行布局，区域之间的间距为10px
+            2. header、footer区域，宽：自适应，高：100px
+            3. left、right区域，宽：100px，高：300px
+            4. center区域，宽：自适应剩余空间，高：300px
+        -->
+        <main>
+            <header>header</header>
+            <section class="left">left</section>
+            <section class="center">center</section>
+            <section class="right">right</section>
+            <footer>footer</footer>
+        </main>
+    </body>
+</html>
